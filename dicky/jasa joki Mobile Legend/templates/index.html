@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+  <html lang="id">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JD Mobile Legend - Jasa Joki ML</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="icon" href="../static/img/face.jpeg" type="image/x-icon">
+       <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body class="">
+      <header class="header text-white py-4 shadow-md">
+          <div class="container mx-auto flex justify-between items-center px-6">
+            <img
+      src="../static/img/face.jpeg"
+      alt="face"
+      class="h-9 w-9 rounded-full object-cover md:h-12 md:w-12 min-h-[36px] min-w-[36px] mr-3"/>
+              <h1 class="text-2xl font-bold text-center">JD Mobile Legend</h1>
+              <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                  ☰
+              </button>
+              <nav id="menu" class="hidden md:flex md:space-x-6 absolute md:relative bg-blue-600 md:bg-transparent w-full md:w-auto top-16 left-0 md:top-0 md:left-auto shadow-md md:shadow-none p-6 md:p-0">
+                  <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                      <li><a href="{{url_for('home')}}#services" class="hover:underline">Layanan</a></li>
+                      <li><a href="{{url_for('home')}}#pricing" class="hover:underline">Harga</a></li>
+                      <li><a href="{{url_for('home')}}#contact" class="hover:underline">Kontak</a></li>
+                      <li><a href="{{url_for('home')}}#testimoni" class="hover:underline">Testimoni</a></li>
+                  </ul>
+              </nav>
+          </div>
+      </header>
+      
+      <section class="text-center text-white">
+        <div class="min-h-screen flex flex-col justify-center items-center"
+            style="background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a44778ea-3457-40e0-8979-b7e3685d23d0/dh9avbn-9bbee5b8-ed78-4669-9274-2d5ef2ddfe8b.png/v1/fill/w_1193,h_670,q_70,strp/vexana_zenith_skin_twisted_fairytale_8k_wallpaper_by_newjer53_dh9avbn-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA3OCIsInBhdGgiOiJcL2ZcL2E0NDc3OGVhLTM0NTctNDBlMC04OTc5LWI3ZTM2ODVkMjNkMFwvZGg5YXZibi05YmJlZTViOC1lZDc4LTQ2NjktOTI3NC0yZDVlZjJkZGZlOGIucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.rlSZ8iHEPjdJSAUtTLfZOladeY6wqkOwmruGVPSwsYE);
+            background-size: contain; background-position: center;  width: 100%; height: 50%;">
+            <h2 class="text-4xl font-bold">Jasa Joki Mobile Legends Terpercaya</h2>
+            <p class="mt-4">Menaikkan rank Anda dengan cepat dan aman!</p>
+            <a href="#pricing" class=" inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">
+                Cek Harga
+            </a>
+        </div>
+    </section>
+    
+      
+      <section class="container mx-auto py-20 px-6" >
+          <h3 id="services" class="text-3xl font-bold text-center mb-10 text-white" >Layanan Kami</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-white p-6 shadow-md rounded-lg text-center">
+                  <img src="https://bevouliin.com/wp-content/uploads/2014/02/rocket-booster-logo-template-bevouliin-preview.png" alt="Joki Rank" class="mx-auto mb-4 rounded-lg">
+                  <h4 class="text-xl font-semibold mb-2">Joki Rank</h4>
+                  <p>Menaikkan rank Anda hingga Mythic dengan cepat.</p>
+              </div>
+              <div class="bg-white p-6 shadow-md rounded-lg text-center">
+                  <img src="../static/img/logo1.png" alt="Joki MMR" class="mx-auto mb-4 rounded-lg">
+                  <h4 class="text-xl font-semibold mb-2">Joki MMR</h4>
+                  <p>Naikkan MMR hero favorit Anda.</p>
+              </div>
+              <div class="bg-white p-6 shadow-md rounded-lg text-center">
+                  <img src="../static/img/logo2.png" alt="Joki Winrate" class="mx-auto mb-4 rounded-lg">
+                  <h4 class="text-xl font-semibold mb-2">Joki Winrate</h4>
+                  <p>Menjaga winrate tetap tinggi dengan gameplay terbaik.</p>
+              </div>
+          </div>
+      </section>
+      
+      <section class="py-20">
+        <div class="container mx-auto text-center px-6">
+            <a id="pricing" href="{{ url_for('paket_harga')}}#harga"> <h3 class="text-3xl font-bold mb-10 text-white">Paket Harga</h3></a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 shadow-md rounded-lg">
+                    <img src="../static/img/rank (2).png" alt="Joki Rank" class="mx-auto mb-4 rounded-lg">
+                    <h4 class="text-xl font-semibold">Warrior - Epic</h4>
+                    <p class="text-gray-600 mt-2">Mulai dari Rp250.000</p>
+                    <a href="https://wa.me/6283148505597?text=Halo,%20saya%20ingin%20memesan%20joki%20Mobile%20Legends%20paket%20Warrior-Epic.%20Apakah%20bisa%20dibantu?" target="_blank"
+                       class="mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600">
+                        Pesan via WhatsApp
+                    </a>
+                </div>
+                <div class="bg-white p-6 shadow-md rounded-lg">
+                    <img src="../static/img/rank (3).png" alt="Joki MMR" class="mx-auto mb-4 rounded-lg">
+                    <h4 class="text-xl font-semibold">Legend - Mythic</h4>
+                    <p class="text-gray-600 mt-2">Mulai dari Rp300.000</p>
+                    <a href="https://wa.me/6283148505597?text=Halo,%20saya%20ingin%20memesan%20joki%20Mobile%20Legends%20paket%20Legend-Mythic.%20Apakah%20bisa%20dibantu?" target="_blank"
+                       class="mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600">
+                        Pesan via WhatsApp
+                    </a>
+                </div>
+                <div class="bg-white p-6 shadow-md rounded-lg">
+                    <img src="../static/img/rank (1).png" alt="Joki Winrate" class="mx-auto mb-4 rounded-lg">
+                    <h4 class="text-xl font-semibold">Mythic - Mythical Glory</h4>
+                    <p class="text-gray-600 mt-2">Mulai dari Rp1.300.000</p>
+                    <a href="https://wa.me/6283148505597?text=Halo,%20saya%20ingin%20memesan%20joki%20Mobile%20Legends%20paket%20Mythic-Mythical%20Glory.%20Apakah%20bisa%20dibantu?" target="_blank"
+                       class="mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600">
+                        Pesan via WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div><div> <a href="{{ url_for('paket_harga')}}" class=" mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600">Info paket lebih lengkap</a>
+              
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="header py-8">
+      <h2 class="text-2xl font-semibold text-center mb-6 text-white">Testimoni Pelanggan</h2>
+      <div class="space-y-4 max-w-4xl mx-auto">
+          <!-- Testimoni 1 -->
+          <div class="flex items-start space-x-4 p-4 bg-white shadow-lg rounded-lg">
+              <div class="w-12 h-12 rounded-full ring-2 ring-primary ring-offset-2 overflow-hidden">
+                  <img src="../static/img/img (1).jpeg" alt="Avatar Andi" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                  <h4 class="font-semibold text-black">Encih</h4>
+                  <p class="text-sm text-gray-600">"Wah pengerjaannya cepat dan efisien sekali, cocok untuk kalian yang mau joki."</p>
+                  <div class="flex mt-2 space-x-1 text-orange-400">
+                      <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="text-gray-300">&#9733;</span>
+                  </div>
+              </div>
+          </div>
+          <!-- Testimoni 2 -->
+          <div class="flex items-start space-x-4 p-4 bg-white shadow-lg rounded-lg">
+              <div class="w-12 h-12 rounded-full ring-2 ring-primary ring-offset-2 overflow-hidden">
+                  <img src="../static/img/img (2).jpeg" alt="Avatar Rina" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                  <h4 class="font-semibold text-black">Kokom</h4>
+                  <p class="text-sm text-gray-600">"Servicenya bagus, aku merekomendasikan kepada kalian."</p>
+                  <div class="flex mt-2 space-x-1 text-orange-400">
+                      <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                  </div>
+              </div>
+          </div>
+          <!-- Testimoni 3 -->
+          <div class="flex items-start space-x-4 p-4 bg-white shadow-lg rounded-lg">
+              <div class="w-12 h-12 rounded-full ring-2 ring-primary ring-offset-2 overflow-hidden">
+                  <img src="../static/img/img (3).jpeg" alt="Avatar Budi" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                  <h4 class="text-black">Brian</h4>
+                  <p class="text-sm text-gray-600">"Pokonya harus joki disini, dijamin cepat."</p>
+                  <div class="flex mt-2 space-x-1 text-orange-400">
+                      <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span class="text-gray-300">&#9733;</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+    
+      
+      <section id="contact" class="container mx-auto py-20 px-6 text-center">
+          <h3 class="text-3xl font-bold mb-6 text-white">Hubungi Kami</h3>
+          <p class="text-white">Pesan joki sekarang melalui WhatsApp.</p>
+          <a href="https://wa.me/6283148505597" target="_blank" class="mt-4 inline-block bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600">Chat WhatsApp</a>
+      </section>
+      
+      <footer class="bg-gray-800 text-white text-center py-6 mt-10">
+          <p>&copy; 2025 JD Mobile Legend. All Rights Reserved.</p>
+      </footer>
+  
+      <script>
+          document.getElementById('menu-toggle').addEventListener('click', function() {
+              document.getElementById('menu').classList.toggle('hidden');
+          });
+      </script>
+  </body>
+  </html>
